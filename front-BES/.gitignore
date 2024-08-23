@@ -7,15 +7,19 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# Dependencies
+node_modules/
+**/node_modules/  # Asegura que se ignoren todas las instancias de node_modules en subdirectorios
+
+# Build outputs
 dist
 dist-ssr
 *.local
 
 # Editor directories and files
-.vscode/*
+.vscode/
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
@@ -23,15 +27,14 @@ dist-ssr
 *.sln
 *.sw?
 
-# local env files
+# Local env files
 .env*.local
 
-# vercel
+# Vercel
 .vercel
 
+# Others
 /.pnp
 .pnp.js
-
 /coverage
-
 *.tsbuildinfo
