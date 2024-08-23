@@ -1,16 +1,13 @@
-'use client'
-
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import backgroundImage from '@/assets/images/background-features.jpg'
+import screenshotExpenses from '@/assets/images/screenshots/expenses.png'
+import screenshotPayroll from '@/assets/images/screenshots/payroll.png'
+import screenshotReporting from '@/assets/images/screenshots/reporting.png'
+import screenshotVatReturns from '@/assets/images/screenshots/vat-returns.png'
 
 const features = [
   {
@@ -65,13 +62,13 @@ export function PrimaryFeatures() {
       aria-label="Features for running your books"
       className="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-32"
     >
-      <Image
+      <img
         className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
         src={backgroundImage}
         alt=""
         width={2245}
         height={1636}
-        unoptimized
+        style={{ objectFit: 'cover' }}
       />
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
@@ -87,7 +84,7 @@ export function PrimaryFeatures() {
           className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
           vertical={tabOrientation === 'vertical'}
         >
-          {({ selectedIndex }) => (
+          {({ selectedIndex }: { selectedIndex: number }) => (
             <>
               <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
                 <TabList className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
@@ -138,12 +135,11 @@ export function PrimaryFeatures() {
                       </p>
                     </div>
                     <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
-                      <Image
+                      <img
                         className="w-full"
                         src={feature.image}
                         alt=""
-                        priority
-                        sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
+                        style={{ objectFit: 'cover' }}
                       />
                     </div>
                   </TabPanel>

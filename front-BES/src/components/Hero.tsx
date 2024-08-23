@@ -1,13 +1,11 @@
-import Image from 'next/image'
-
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import logoLaravel from '@/images/logos/laravel.svg'
-import logoMirage from '@/images/logos/mirage.svg'
-import logoStatamic from '@/images/logos/statamic.svg'
-import logoStaticKit from '@/images/logos/statickit.svg'
-import logoTransistor from '@/images/logos/transistor.svg'
-import logoTuple from '@/images/logos/tuple.svg'
+import logoLaravel from '@/assets/images/logos/laravel.svg'
+import logoMirage from '@/assets/images/logos/mirage.svg'
+import logoStatamic from '@/assets/images/logos/statamic.svg'
+import logoStaticKit from '@/assets/images/logos/statickit.svg'
+import logoTransistor from '@/assets/images/logos/transistor.svg'
+import logoTuple from '@/assets/images/logos/tuple.svg'
 
 export function Hero() {
   return (
@@ -73,7 +71,7 @@ export function Hero() {
               >
                 {group.map((company) => (
                   <li key={company.name} className="flex">
-                    <Image src={company.logo} alt={company.name} unoptimized />
+                    <img src={company.logo} alt={company.name} className='h-10 w-auto' />
                   </li>
                 ))}
               </ul>

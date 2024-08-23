@@ -1,11 +1,9 @@
-import Image from 'next/image'
-
 import { Container } from '@/components/Container'
-import avatarImage1 from '@/images/avatars/avatar-1.png'
-import avatarImage2 from '@/images/avatars/avatar-2.png'
-import avatarImage3 from '@/images/avatars/avatar-3.png'
-import avatarImage4 from '@/images/avatars/avatar-4.png'
-import avatarImage5 from '@/images/avatars/avatar-5.png'
+import avatarImage1 from '@/assets/images/avatars/avatar-1.png'
+import avatarImage2 from '@/assets/images/avatars/avatar-2.png'
+import avatarImage3 from '@/assets/images/avatars/avatar-3.png'
+import avatarImage4 from '@/assets/images/avatars/avatar-4.png'
+import avatarImage5 from '@/assets/images/avatars/avatar-5.png'
 
 const testimonials = [
   [
@@ -122,7 +120,7 @@ export function Testimonials() {
                           </div>
                         </div>
                         <div className="overflow-hidden rounded-full bg-slate-50">
-                          <Image
+                          <img
                             className="h-14 w-14 object-cover"
                             src={testimonial.author.image}
                             alt=""

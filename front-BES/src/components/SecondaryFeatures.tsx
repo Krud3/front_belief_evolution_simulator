@@ -1,20 +1,17 @@
-'use client'
-
 import { useId } from 'react'
-import Image, { type ImageProps } from 'next/image'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import screenshotContacts from '@/images/screenshots/contacts.png'
-import screenshotInventory from '@/images/screenshots/inventory.png'
-import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
+import screenshotContacts from '@/assets/images/screenshots/contacts.png'
+import screenshotInventory from '@/assets/images/screenshots/inventory.png'
+import screenshotProfitLoss from '@/assets/images/screenshots/profit-loss.png'
 
 interface Feature {
   name: React.ReactNode
   summary: string
   description: string
-  image: ImageProps['src']
+  image: string
   icon: React.ComponentType
 }
 
@@ -155,7 +152,7 @@ function FeaturesMobile() {
           <div className="relative mt-10 pb-10">
             <div className="absolute -inset-x-4 bottom-0 top-8 bg-slate-200 sm:-inset-x-6" />
             <div className="relative mx-auto w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
-              <Image
+              <img
                 className="w-full"
                 src={feature.image}
                 alt=""
@@ -172,7 +169,7 @@ function FeaturesMobile() {
 function FeaturesDesktop() {
   return (
     <TabGroup className="hidden lg:mt-20 lg:block">
-      {({ selectedIndex }) => (
+      {({ selectedIndex }: { selectedIndex: number }) => (
         <>
           <TabList className="grid grid-cols-3 gap-x-8">
             {features.map((feature, featureIndex) => (
@@ -206,7 +203,7 @@ function FeaturesDesktop() {
                   aria-hidden={featureIndex !== selectedIndex}
                 >
                   <div className="w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
-                    <Image
+                    <img
                       className="w-full"
                       src={feature.image}
                       alt=""

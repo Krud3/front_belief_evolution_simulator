@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-call-to-action.jpg'
+import backgroundImage from '@/assets/images/background-call-to-action.jpg'
 
 export function CallToAction() {
   return (

@@ -1,13 +1,24 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
   "compilerOptions": {
-    "baseUrl": "./",
+    "target": "es6", // Puedes cambiar a "esnext" si prefieres las características más modernas de ES
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext", // Vite utiliza ESNext para un mejor rendimiento
+    "moduleResolution": "node", // Cambiado de "bundler" a "node" para que coincida con el comportamiento de Vite
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx", // Cambiado de "preserve" a "react-jsx" para soportar JSX en React 17+
+    "incremental": true,
+    "baseUrl": "./", // Asegura que la base de resolución esté en el directorio raíz del proyecto
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"] // Mantén el alias como está, ya que Vite también lo soporta
     }
-  }
+  },
+  "include": ["src"], // Incluye la carpeta "src" donde está tu código fuente
+  "exclude": ["node_modules", "dist"] // Excluye "node_modules" y la carpeta de salida de Vite "dist"
 }
