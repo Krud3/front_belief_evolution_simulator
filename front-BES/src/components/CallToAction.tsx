@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-call-to-action.jpg'
@@ -10,13 +8,14 @@ export function CallToAction() {
       id="get-started-today"
       className="relative overflow-hidden bg-blue-600 py-32"
     >
-      <Image
+      {/* Usa <img> en lugar de <Image> */}
+      <img
         className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
         src={backgroundImage}
         alt=""
         width={2347}
         height={1244}
-        unoptimized
+        loading="lazy" // Usar el atributo loading si deseas lazy loading
       />
       <Container className="relative">
         <div className="mx-auto max-w-lg text-center">
@@ -33,5 +32,5 @@ export function CallToAction() {
         </div>
       </Container>
     </section>
-  )
+  );
 }
