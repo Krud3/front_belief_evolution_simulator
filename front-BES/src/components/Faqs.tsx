@@ -4,56 +4,56 @@ import backgroundImage from '@/assets/images/background-faqs.jpg'
 const faqs = [
   [
     {
-      question: 'Does TaxPal handle VAT?',
+      question: 'Lorem ipsum dolor sit amet?',
       answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
+        'Consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.',
     },
     {
-      question: 'Can I pay for my subscription via purchase order?',
+      question: 'Quisque vehicula nunc sit amet libero euismod?',
       answer: 'Absolutely, we are happy to take your money in all forms.',
     },
     {
-      question: 'How do I apply for a job at TaxPal?',
+      question: 'Ut enim ad minim veniam, quis nostrud exercitation?',
       answer:
-        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
+        'Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat.',
     },
   ],
   [
     {
-      question: 'What was that testimonial about tax fraud all about?',
+      question: 'Sed ut perspiciatis unde omnis?',
       answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
+        'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
     },
     {
       question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
+        'Excepteur sint occaecat cupidatat non proident?',
       answer:
-        'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
+        'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.',
     },
     {
-      question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
+      question: 'Nor again is there anyone who loves?',
       answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
+        'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.',
     },
   ],
   [
     {
-      question: 'How do you generate reports?',
+      question: 'Nam libero tempore, cum soluta nobis?',
       answer:
-        'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
+        'Et harum quidem rerum facilis est et expedita distinctio.',
     },
     {
-      question: 'Can we expect more inventory features?',
+      question: 'Temporibus autem quibusdam?',
       answer: 'In life it’s really better to never expect anything at all.',
     },
     {
-      question: 'I lost my password, how do I get into my account?',
+      question: 'At vero eos et accusamus?',
       answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
+        'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.',
     },
   ],
 ]
+
 
 export function Faqs() {
   return (
@@ -79,8 +79,7 @@ export function Faqs() {
             Frequently asked questions
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
+          Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.
           </p>
         </div>
         <ul
