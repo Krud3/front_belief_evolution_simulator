@@ -1,3 +1,4 @@
+import Reeact from 'react';
 import { Link } from 'react-router-dom';
 import {
   Popover,
@@ -11,6 +12,8 @@ import { Button } from '@/components/Button'; // Usa alias si está configurado;
 import { Container } from '@/components/Container';
 import { Logo } from '@/components/Logo';
 import { NavLink } from '@/components/NavLink';
+
+import { LogoPromueva } from '@/components/LogoPromueva';
 
 function MobileNavLink({
   href,
@@ -64,9 +67,9 @@ function MobileNavigation() {
         transition
         className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in"
       >
-        <MobileNavLink href="#features">Features</MobileNavLink>
-        <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
-        <MobileNavLink href="#pricing">Pricing</MobileNavLink>
+        <MobileNavLink href="#features">Create</MobileNavLink>
+        <MobileNavLink href="#testimonials">Previous results</MobileNavLink>
+        <MobileNavLink href="#pricing">Wiki</MobileNavLink>
         <hr className="m-2 border-slate-300/40" />
         <MobileNavLink href="/login">Sign in</MobileNavLink>
       </PopoverPanel>
@@ -81,12 +84,12 @@ export function Header() {
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link to="/" aria-label="Home">
-              <Logo className="h-10 w-auto" />
+              <LogoPromueva className="h-14 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
+              <NavLink href="#features">Create</NavLink>
+              <NavLink href="#testimonials">Previous results</NavLink>
+              <NavLink href="#pricing">Wiki</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
@@ -95,7 +98,7 @@ export function Header() {
             </div>
             <Button href="/register" color="blue">
               <span>
-                Get started <span className="hidden lg:inline">today</span>
+                Register <span className="hidden lg:inline">today</span>
               </span>
             </Button>
             <div className="-mr-1 md:hidden">

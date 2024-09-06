@@ -4,34 +4,34 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/assets/images/background-features.jpg'
-import screenshotExpenses from '@/assets/images/screenshots/expenses.png'
-import screenshotPayroll from '@/assets/images/screenshots/payroll.png'
-import screenshotReporting from '@/assets/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/assets/images/screenshots/vat-returns.png'
+import screenshotExpenses from '@/assets/images/screenshots/example2.png'
+import screenshotPayroll from '@/assets/images/screenshots/example1.png'
+import screenshotReporting from '@/assets/images/screenshots/example4.png'
+import screenshotVatReturns from '@/assets/images/screenshots/example3.png'
 
 const features = [
   {
-    title: 'Payroll',
+    title: 'Create Custom Simulations',
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+      "Build simulations from scratch or use existing network data to model specific scenarios.",
     image: screenshotPayroll,
   },
   {
-    title: 'Claim expenses',
+    title: 'View Detailed Simulation Results',
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+      "Track how opinions change and evolve through multiple iterations, providing valuable insights into social dynamics.",
     image: screenshotExpenses,
   },
   {
-    title: 'VAT handling',
+    title: 'Detailed Analysis',
     description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
+      "Access in-depth simulation results, including general, network-wide, and agent-specific insights.",
     image: screenshotVatReturns,
   },
   {
-    title: 'Reporting',
+    title: 'Integration with TimeScale',
     description:
-      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
+      'Leverage TimeScale for efficient data storage and analysis of long-term simulations.',
     image: screenshotReporting,
   },
 ]
@@ -73,11 +73,10 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to run your books.
+          Everything you need to simulate and analyze social networks.
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Well everything you need if you aren’t that picky about minor
-            details like tax compliance.
+          Our opinion evolution simulator, SiLEnSeSS, provides all the tools you need to create, customize, and analyze social network simulations with ease. Whether you're a scientist or part of the general public, our intuitive interface lets you focus on understanding the data without getting bogged down in the technical details.
           </p>
         </div>
         <TabGroup

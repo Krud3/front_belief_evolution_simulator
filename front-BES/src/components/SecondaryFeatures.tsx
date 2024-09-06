@@ -3,9 +3,9 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import screenshotContacts from '@/assets/images/screenshots/contacts.png'
-import screenshotInventory from '@/assets/images/screenshots/inventory.png'
-import screenshotProfitLoss from '@/assets/images/screenshots/profit-loss.png'
+import screenshotContacts from '@/assets/images/screenshots/graph3.png'
+import screenshotInventory from '@/assets/images/screenshots/graph2.png'
+import screenshotProfitLoss from '@/assets/images/screenshots/graph1.png'
 
 interface Feature {
   name: React.ReactNode
@@ -17,10 +17,10 @@ interface Feature {
 
 const features: Array<Feature> = [
   {
-    name: 'Reporting',
-    summary: 'Stay on top of things with always up-to-date reporting features.',
+    name: 'Simulations',
+    summary: 'Easily create custom simulations and explore how opinions evolve over time. Gain insights into social behavior without the hassle of manual setup.',
     description:
-      'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
+      'We focus on streamlining the process, so you can focus on analyzing the data and discovering trends.',
     image: screenshotProfitLoss,
     icon: function ReportingIcon() {
       let id = useId()
@@ -51,11 +51,11 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: 'Inventory',
+    name: 'Data Analysis',
     summary:
-      'Never lose track of what’s in stock with accurate inventory tracking.',
+      'Visualize detailed results from every simulation, including how opinions shift over multiple iterations, giving you a clear picture of network dynamics.',
     description:
-      'We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.',
+      'Our advanced tools make it easy to track and understand changes in social opinions.',
     image: screenshotInventory,
     icon: function InventoryIcon() {
       return (
@@ -79,11 +79,11 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: 'Contacts',
+    name: 'Network Insights',
     summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
+      'View the structure of your networks and how they influence opinion shifts across agents. Our platform helps you uncover hidden patterns in social interactions.',
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+      'Understanding network influence has never been more straightforward.',
     image: screenshotContacts,
     icon: function ContactsIcon() {
       return (
@@ -225,17 +225,16 @@ export function SecondaryFeatures() {
   return (
     <section
       id="secondary-features"
-      aria-label="Features for simplifying everyday business tasks"
+      aria-label="Features for simplify the study of opinion evolution"
       className="pb-14 pt-20 sm:pb-20 sm:pt-32 lg:pb-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Simplify everyday business tasks.
+          Simplify the study of opinion evolution.
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Because you’d probably be a little confused if we suggested you
-            complicate your everyday business tasks instead.
+          Because understanding complex social dynamics shouldn’t be complicated.
           </p>
         </div>
         <FeaturesMobile />
